@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_web_auth_2/flutter_web_auth_2.dart';
 
 import 'base_web_auth.dart';
@@ -14,7 +16,10 @@ class IoWebAuth implements BaseWebAuth {
     return await FlutterWebAuth2.authenticate(
       callbackUrlScheme: callbackUrlScheme,
       url: url,
-      preferEphemeral: (opts?['preferEphemeral'] == true),
+      options: FlutterWebAuth2Options(
+        preferEphemeral: opts?['preferEphemeral'] == true,
+        intentFlags: Platform.isAndroid && opts?['preferEphemeral'] == true ? ephemeralIntentFlags : null,
+      ),
     );
   }
 }
