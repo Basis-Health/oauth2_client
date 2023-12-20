@@ -18,7 +18,7 @@ class IoWebAuth implements BaseWebAuth {
       url: url,
       options: FlutterWebAuth2Options(
         preferEphemeral: opts?['preferEphemeral'] == true,
-        intentFlags: Platform.isAndroid && opts?['preferEphemeral'] == true ? ephemeralIntentFlags : null,
+        intentFlags: Platform.isAndroid && opts?['preferEphemeral'] == true ? ephemeralIntentFlags : defaultIntentFlags,
       ),
     );
   }
