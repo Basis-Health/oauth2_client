@@ -1,7 +1,7 @@
 name: oauth2_client
 
 description: Flutter library for interacting with OAuth2 servers, with classes for transparent authorized requests, secure OAuth token storage, automatic token refeshing.
-version: 3.2.2
+version: 3.3.0
 homepage: https://github.com/teranetsrl/oauth2_client
 repository: https://github.com/teranetsrl/oauth2_client
 environment:
@@ -22,7 +22,7 @@ dev_dependencies:
     sdk: flutter
   build_runner: ^2.4.6
   mockito: ^5.4.2
-  flutter_lints: ^2.0.0
+  flutter_lints: ^4.0.0
 
 # The following section is specific to Flutter.
 flutter: null
